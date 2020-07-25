@@ -15,7 +15,7 @@ jobs:
 
       - name: Determine release version
         run: |
-          RELEASE_VERSION = $(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,' | sed -e 's/^v//')
+          RELEASE_VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,' | sed -e 's/^v//')
           echo RELEASE_VERSION=$RELEASE_VERSION
 
       - name: Build and Push Docker images
