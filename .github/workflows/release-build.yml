@@ -4,7 +4,7 @@ name: Build using Docker
 on:
   push:
     branches:
-      - master
+      - $default-branch
     tags:
       - v*
 
