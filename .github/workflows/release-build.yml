@@ -1,8 +1,9 @@
 name: Build Releases
 
 on:
-  tags:
-    - v*
+  push:
+    tags:
+      - v*
 
 jobs:
   docker-deploy:
